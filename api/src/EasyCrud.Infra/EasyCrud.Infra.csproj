@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20201107190057_Version 01.00.cs" />
+    <Compile Remove="Migrations\20201107190057_Version 01.00.Designer.cs" />
+    <Compile Remove="Migrations\20201130183703_Version 01.00.cs" />
+    <Compile Remove="Migrations\20201130183703_Version 01.00.Designer.cs" />
+    <Compile Remove="Migrations\20201130184124_Version 01.00.cs" />
+    <Compile Remove="Migrations\20201130184124_Version 01.00.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EasyCrud.Domain\EasyCrud.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

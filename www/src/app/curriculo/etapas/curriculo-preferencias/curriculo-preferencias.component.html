@@ -1,0 +1,118 @@
+<form [formGroup]="this.navegacaoService.form.get('preference')">
+  <div class="card">
+    <div class="card-header">
+      What is your willingness to work today? / Qual é sua disponibilidade para trabalhar hoje?
+    </div>
+    <div class="card-body">
+      <div class="col-auto">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="upToFourHoursPerDay" id="upToFourHoursPerDay">
+              <label for="phone">Up to 4 hours per day / Até 4 horas por dia</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto espaco">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="fourToSixHoursPerDay" id="fourToSixHoursPerDay">
+              <label for="phone">4 to 6 hours per day / De 4 á 6 horas por dia</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto espaco">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="sixtoEightHoursPerDay" id="sixtoEightHoursPerDay">
+              <label for="phone">6 to 8 hours per day /De 6 á 8 horas por dia</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto espaco">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="upToEightHoursADay" id="upToEightHoursADay">
+              <label for="phone">Up to 8 hours a day (are you sure?) / Acima de 8 horas por dia (tem certeza?)</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto espaco">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="onlyWeekends" id="onlyWeekends">
+              <label for="phone">Only weekends / Apenas finais de semana</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card espaco">
+    <div class="card-header">
+      What's the best time to work for you? / Pra você qual é o melhor horário para trabalhar?
+    </div>
+    <div class="card-body">
+      <div class="col-auto">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="morning" id="morning">
+              <label for="phone">Morning (from 08:00 to 12:00) / Manhã (de 08:00 ás 12:00)</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto espaco">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="afternoon" id="afternoon">
+              <label for="phone">Afternoon (from 1:00 p.m. to 6:00 p.m.) / Tarde (de 13:00 ás 18:00)</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto espaco">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="night" id="night">
+              <label for="phone">Night (7:00 p.m. to 10:00 p.m.) /Noite (de 19:00 as 22:00)</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto espaco">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="dawn" id="dawn">
+              <label for="phone">Dawn (from 10 p.m. onwards) / Madrugada (de 22:00 em diante)</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto espaco">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="business" id="business">
+              <label for="phone">Business (from 08:00 a.m. to 06:00 p.m.) / Comercial (de 08:00 as 18:00)</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>

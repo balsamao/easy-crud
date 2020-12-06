@@ -1,0 +1,33 @@
+<div class="espaco">
+  <app-alerta-erro [podeExibir]="this.navegacaoService.mensagemErro.length > 0"
+    [mensagem]="this.navegacaoService.mensagemErro"></app-alerta-erro>
+</div>
+<div class="card espaco">
+  <h5 class="card-header">
+    {{this.navegacaoService.titulo}}
+  </h5>
+  <div class="card-body">
+    <router-outlet></router-outlet>
+
+    <div class="row espaco">
+      <div class="col-sm-6">
+        <input class="btn btn-primary" type="button" value="Voltar" (click)="this.navegacaoService.voltar()">
+      </div>
+
+      <div class="col-sm-6" *ngIf="exibirBotaoAvancar()">
+        <input class="btn btn-primary float-right botao-avancar" type="button" value="Próximo"
+          (click)="this.navegacaoService.proximo()">
+      </div>
+
+      <div class="col-sm-6" *ngIf="exibirBotaoSalvar()">
+        <input class="btn btn-primary float-right botao-avancar" type="button" value="Salvar"
+          (click)="this.navegacaoService.salvar()">
+      </div>
+
+      <div class="col-sm-6" *ngIf="exibirBotaoEditar()">
+        <input class="btn btn-primary float-right botao-avancar" type="button" value="Editar"
+          (click)="this.navegacaoService.editar()">
+      </div>
+    </div>
+  </div>
+</div>

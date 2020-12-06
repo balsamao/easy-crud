@@ -1,0 +1,40 @@
+<div *ngFor="let tecnologia of tecnologias">
+  <app-tecnologias [form]="this.navegacaoService.form.get('skills')" [tecnologia]="tecnologia"></app-tecnologias>
+</div>
+
+<form [formGroup]="this.navegacaoService.form.get('skills')">
+  <div class="card espaco">
+    <div class="card-header">
+      Informção adicional
+    </div>
+    <div class="card-body">
+      <div class="col-auto">
+        <div class="row">
+          <div class="col-auto">
+            <label for="aditionalInformation">Do you know any other language or framework that was not listed above?
+              Tell us and evaluate yourself from 0 to 5. / Conhece mais alguma linguagem ou framework que não foi
+              listado aqui em cima? Conte para nos e se auto avalie ainda de 0 a 5.</label>
+            <input type="text" class="form-control form-control-sm" id="aditionalInformation"
+              formControlName="aditionalInformation">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card espaco">
+    <div class="card-header">
+      CRUD
+    </div>
+    <div class="card-body">
+      <div class="col-auto">
+        <div class="row">
+          <div class="col-md-12">
+            <label for="linkCrud">Link CRUD</label>
+            <input type="text" class="form-control form-control-sm" id="linkCrud"
+              formControlName="linkCrud">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,45 @@
+<form [formGroup]="form">
+    <div class="card espaco">
+        <div class="card-header">
+            {{tecnologia.toUpperCase()}}
+        </div>
+        <div class="card-body">
+            <div class="col-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" formControlName="{{tecnologia}}"
+                                name="{{tecnologia}}" id="inlineRadio0" value={{LEVEL_ZERO}} required>
+                            <label class="form-check-label" for="inlineRadio0">{{LEVEL_ZERO}}</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" formControlName="{{tecnologia}}"
+                                name="{{tecnologia}}" id="inlineRadio1" value={{LEVEL_UM}} required>
+                            <label class="form-check-label" for="inlineRadio1">{{LEVEL_UM}}</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" formControlName="{{tecnologia}}"
+                                name="{{tecnologia}}" id="inlineRadio2" value={{LEVEL_DOIS}} required>
+                            <label class="form-check-label" for="inlineRadio2">{{LEVEL_DOIS}}</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" formControlName="{{tecnologia}}"
+                                name="{{tecnologia}}" id="inlineRadio3" value={{LEVEL_TRES}} required>
+                            <label class="form-check-label" for="inlineRadio3">{{LEVEL_TRES}}</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" formControlName="{{tecnologia}}"
+                                name="{{tecnologia}}" id="inlineRadio4" value={{LEVEL_QUATRO}} required>
+                            <label class="form-check-label" for="inlineRadio4">{{LEVEL_QUATRO}}</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" formControlName="{{tecnologia}}"
+                                name="{{tecnologia}}" id="inlineRadio5" value={{LEVEL_CINCO}} required>
+                            <label class="form-check-label" for="inlineRadio5">{{LEVEL_CINCO}}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

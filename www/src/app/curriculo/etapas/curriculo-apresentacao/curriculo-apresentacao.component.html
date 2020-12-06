@@ -1,0 +1,57 @@
+<form [formGroup]="this.navegacaoService.form">
+  <div class="card">
+    <div class="card-header">
+      Informações pessoais
+    </div>
+    <div class="card-body">
+      <div class="col-auto">
+        <div class="row">
+          <div class="col-sm-4 col-md-6">
+            <label for="name">Nome/Name</label>
+            <input type="text" class="form-control form-control-sm" [class.is-invalid]="name.invalid"
+              [class.is-valid]="name.valid" id="name" formControlName="name" maxlength="150" required>
+            <div *ngIf="name.invalid" class="invalid-feedback">
+              <div *ngIf="name.errors.required">
+                Nome é obrigatório.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-6">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control form-control-sm" [class.is-invalid]="email.invalid"
+              [class.is-valid]="email.valid" id="email" formControlName="email" maxlength="150" pattern="{{regexEmail}}"
+              required>
+            <div *ngIf="email.invalid" class="invalid-feedback">
+              <div *ngIf="email.errors.required">
+                E-mail é obrigatório.
+              </div>
+              <div *ngIf="email.errors.pattern">
+                E-mail inválido
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row espaco">
+          <div class="col-sm-4 col-md-6">
+            <label for="portfolio">Portfolio</label>
+            <input type="text" class="form-control form-control-sm" [class.is-invalid]="portfolio.invalid"
+              [class.is-valid]="portfolio.valid" id="portfolio" formControlName="portfolio">
+          </div>
+
+          <div class="col-sm-4 col-md-6">
+            <label for="hourlySalary">Pretensão salarial por hora/Hourly salary</label>
+            <input currencyMask class="form-control form-control-sm" [class.is-invalid]="hourlySalary.invalid"
+              [class.is-valid]="hourlySalary.valid" id="hourlySalary" formControlName="hourlySalary" required>
+            <div *ngIf="hourlySalary.invalid" class="invalid-feedback">
+              <div *ngIf="hourlySalary.errors.required">
+                Salário é obrigatório.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

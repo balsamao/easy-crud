@@ -1,0 +1,63 @@
+<form [formGroup]="this.navegacaoService.form">
+  <div class="card">
+    <div class="card-header">
+      Contato
+    </div>
+    <div class="card-body">
+      <div class="col-auto">
+        <div class="row">
+          <div class="col-sm-4 col-md-6">
+            <label for="phone">Telefone/Phone (Whatsapp)</label>
+            <input type="text" class="form-control form-control-sm" [class.is-invalid]="phone.invalid"
+              [class.is-valid]="phone.valid" id="phone" formControlName="phone" mask="(00) 00000-0000" required>
+            <div *ngIf="phone.invalid" class="invalid-feedback">
+              <div *ngIf="phone.errors.required">
+                Telefone é obrigatório.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-6">
+            <label for="linkedin">Linkedin</label>
+            <input type="text" class="form-control form-control-sm" [class.is-invalid]="linkedin.invalid"
+              [class.is-valid]="linkedin.valid" id="linkedin" formControlName="linkedin">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card espaco">
+    <div class="card-header">
+      Localidade
+    </div>
+    <div class="card-body">
+      <div class="col-auto">
+        <div class="row">
+          <div class="col-sm-4 col-md-6">
+            <label for="city">Cidade/City</label>
+            <input type="text" class="form-control form-control-sm" [class.is-invalid]="city.invalid"
+              [class.is-valid]="city.valid" id="city" formControlName="city" required>
+            <div *ngIf="city.invalid" class="invalid-feedback">
+              <div *ngIf="city.errors.required">
+                Cidade é obrigatório.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-6">
+            <label for="state">Estado/State</label>
+            <input type="text" class="form-control form-control-sm" [class.is-invalid]="state.invalid"
+              [class.is-valid]="state.valid" id="state" formControlName="state" required>
+            <div *ngIf="state.invalid" class="invalid-feedback">
+              <div *ngIf="state.errors.required">
+                Estado é obrigatório.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
